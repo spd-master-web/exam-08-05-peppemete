@@ -1,6 +1,6 @@
 /* disable these when you're done */
 .ui-grid-container-one {
-  background-image: url('/images/grid-1.png');
+  /*background-image: url('/images/grid-1.png');*/
 }
 .ui-grid-container-two {
   background-image: url('/images/grid-2.png');
@@ -9,3 +9,12 @@
   background-image: url('/images/grid-3.png');
 }
 /* your CSS goes here */
+.ui-grid-container-one {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5,1fr);
+}
+
+.ui-grid-container-one>*:nth-child(2n+1){
+  background-color:var(--ui-color) ;
+}
